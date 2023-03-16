@@ -7,8 +7,22 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
+    <!-- External icon library -->
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,13 +31,31 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+  <body class="body">
+    <!-- Top nav bar -->
+    <nav class="nav">
+      <span id="logo">tweeter</span>
+      <div id="right-content">
+        <span>Write a new tweet</span>
+        <i style="color: red;" class="fa-solid fa-angles-down"></i>
+      </div>
     </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <!-- INFO HERE -->
+    <header class="header">
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Your Name</h2>
+      </div>
+  </header>
+
+    <!-- INFO HERE -->
+    <main class="container">
+
+
+    </main>
   </body>
 </html>
