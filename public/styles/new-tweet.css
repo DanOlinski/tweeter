@@ -1,0 +1,24 @@
+#tweetBtnAndCounter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+ }
+
+ #tweet-btn {
+  background-color: #4056A1;
+  color: #ffffff;
+  padding: 5px;
+  border: 0px;
+ }
+
+ #tweet-text {
+  width: 100%;
+  height: 40px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  border-bottom: 4px solid rgb(24, 23, 23);
+  background: transparent;
+}
