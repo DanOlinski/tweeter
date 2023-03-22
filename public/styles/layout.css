@@ -13,7 +13,6 @@ html {
 /*
  * Global layout class
  */
-
 .body {
   display: flex;
   flex-direction: column;
@@ -27,7 +26,6 @@ html {
 /*
 this class handles the layout of the elements below the header
  */
-
  .container {
   margin-top: 20px;
   margin-bottom: 20px;
