@@ -33,10 +33,7 @@ this class handles the layout of the elements below the header
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #f4f1ec;
   width: 90%;
- }
-
- .counterRedText {
-  color: red;
  }

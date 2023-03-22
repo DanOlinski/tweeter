@@ -25,18 +25,16 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- External JS -->
+    <!-- External JS allows jQuery library to be accessed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body class="body">
     <!-- Top nav bar -->
     <nav class="nav">
       <span id="nav-logo">tweeter</span>
-      <div id="right-content">
+      <div id="top-right-content">
         <span>Write a new tweet</span>
         <i style="color: red;" class="fa-solid fa-angles-down"></i>
       </div>
@@ -51,14 +49,14 @@
       <div>
           <h2>Your Name</h2>
       </div>
-  </header>
 
+  </header>
     <!-- the following are the elements for the page, located below the header. Check CSS files for more info on design settings -->
     <main class="container">
 
-      <!-- INFO HERE -->
+      <!-- The section element contains the text input box, a button to submit the text, and a number informing how many characters you can write into the text box -->
       <section class="new-tweet">
-        <form action="/tweets/" method="POST">
+        <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label><br>
           <textarea name="text" id="tweet-text"></textarea><br>
           <div id="tweetBtnAndCounter">
@@ -67,7 +65,34 @@
           </div>
         </form>
       </section>
+
+      <!-- The section bellow contains the information of a posted tweet -->
+      <section class="posted-tweet">
+        <header class="tweet-header">
+          <div>
+            <i class="fa-regular fa-user"></i><!-- user icon -->
+            &#160
+            Your Name
+          </div>
+          <div class="username">
+            @username
+          </div>
+        </header>
+        <article class="article">Posted tweet</article>
+        <p class="border"></p>
+        <footer class="tweet-footer">
+          <div>
+            date posted
+          </div>
+          <div>
+            <i id="flag" class="fa-solid fa-flag"></i>&#160<!-- flag icon -->
+            <i id="retweet" class="fa-solid fa-retweet">&#160</i><!-- refresh icon -->
+            <i id="heart" class="fa-solid fa-heart">&#160</i><!-- heart icon -->
+          </div>
+        </footer>
+      </section>
     </main>
   </body>
-  <script src="scripts/composer-char-counter.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
+  <script src="/scripts/tweet-hover-listener.js"></script>
 </html>

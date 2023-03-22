@@ -21,7 +21,7 @@
 }
 
 /*Nav bar right side content design features*/
-#right-content {
+#top-right-content {
   display: flex;
   flex-direction: column;
   align-items: center;
