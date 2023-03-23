@@ -2,31 +2,31 @@
 $(document).ready(function() {
 
   //The jQuery modules below add a CSS class that casts a shadow when mouse hovers over the posted tweet box
-  $('.posted-tweet').on("mouseover", function() {
+  $('.container').on("mouseover", '.posted-tweet', function() {
     $(this).addClass('shade-on-mouseover');
   });
-  $('.posted-tweet').on("mouseout", function() {
+  $('.container').on("mouseout", '.posted-tweet', function() {
     $(this).removeClass('shade-on-mouseover');
   });
 
   //The jQuery modules below add a CSS class that changes the color of the footer icons(within posted tweet box) when mouse hovers over the icons
-  $('#flag').on("mouseover", function() {
+  $('.container').on("mouseover", '#flag', function() {
     $(this).addClass('orange-on-mouseover');
     console.log(this);
   });
-  $("#flag").on("mouseout", function() {
+  $('.container').on("mouseout", "#flag", function() {
     $(this).removeClass('orange-on-mouseover');
   });
-  $("#retweet").on("mouseover", function() {
+  $('.container').on("mouseover", "#retweet", function() {
     $(this).addClass('orange-on-mouseover');
   });
-  $("#retweet").on("mouseout", function() {
+  $('.container').on("mouseout", "#retweet", function() {
     $(this).removeClass('orange-on-mouseover');
   });
-  $("#heart").on("mouseover", function() {
+  $('.container').on("mouseover", "#heart", function() {
     $(this).addClass('orange-on-mouseover');
   });
-  $("#heart").on("mouseout", function() {
+  $('.container').on("mouseout", "#heart", function() {
     $(this).removeClass('orange-on-mouseover');
   });
 });

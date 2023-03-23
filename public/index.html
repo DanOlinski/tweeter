@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta charset="UTF-8" />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -43,7 +44,7 @@
     <!-- header elements -->
     <header class="header">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png" /> 
       </div>
       <br>
       <div>
@@ -52,7 +53,7 @@
 
   </header>
     <!-- the following are the elements for the page, located below the header. Check CSS files for more info on design settings -->
-    <main class="container">
+    <main class="tweet-container">
 
       <!-- The section element contains the text input box, a button to submit the text, and a number informing how many characters you can write into the text box -->
       <section class="new-tweet">
@@ -66,33 +67,12 @@
         </form>
       </section>
 
-      <!-- The section bellow contains the information of a posted tweet -->
-      <section class="posted-tweet">
-        <header class="tweet-header">
-          <div>
-            <i class="fa-regular fa-user"></i><!-- user icon -->
-            &#160
-            Your Name
-          </div>
-          <div class="username">
-            @username
-          </div>
-        </header>
-        <article class="article">Posted tweet</article>
-        <p class="border"></p>
-        <footer class="tweet-footer">
-          <div>
-            date posted
-          </div>
-          <div>
-            <i id="flag" class="fa-solid fa-flag"></i>&#160<!-- flag icon -->
-            <i id="retweet" class="fa-solid fa-retweet">&#160</i><!-- refresh icon -->
-            <i id="heart" class="fa-solid fa-heart">&#160</i><!-- heart icon -->
-          </div>
-        </footer>
-      </section>
+      <!-- This space(in the browser) will be populated with a box containing a posted tweet and other information related to the tweet. the code that will implement this is in the /scripts/client.js file-->
+      
     </main>
   </body>
   <script src="/scripts/composer-char-counter.js"></script>
   <script src="/scripts/tweet-hover-listener.js"></script>
+  <script src="/scripts/helpers.js"></script>
+  <script src="/scripts/client.js"></script>
 </html>
