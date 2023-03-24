@@ -10,7 +10,9 @@ const timeAgo = function(numericalDate) {
     return postedTimeAgo(60000) + ' Minute(s) Ago';
   } else if (postedTimeAgo(3600000) < 24) {
     return timeAgo(3600000) + ' Hour(s) Ago';
+  } else if (postedTimeAgo((3600000 * 24)) < 367) {
+    return timeAgo(3600000) + ' Hour(s) Ago';
   }
-  postedTimeAgo((3600000 * 24));
-  return postedTimeAgo((3600000 * 24)) + ' Day(s) Ago';
+  postedTimeAgo((3600000 * (24*366)));
+  return postedTimeAgo((3600000 * (24*366))) + ' Year(s) Ago';
 };

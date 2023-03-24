@@ -65,5 +65,14 @@ const renderTweets = function(tweetObject) {
 
 //the script below prevents server from accessing information that hasn't been loaded yet, since that would cause an error
 $(document).ready(function() {
+  //The module below is a listener for the submit event (the submit is located in the button that belong to the form containing the tweet-form id)
+  $('#tweet-form').submit(function(event) {
+    //for submit listeners we need to preventDefault from happening(so that the page doesn't refresh when button is pressed)
+    event.preventDefault();
+    
+    //the variable contains the content typed into the form using .serialize() to find the text otherwise I'd have to acces the info using: const textInput = $($(this).children()[2]).val()
+    const textInput = $(this).serialize();
+    //console.log(textInput)
+  });
   renderTweets(tweetData);
 });
