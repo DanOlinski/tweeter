@@ -9,6 +9,14 @@ $(document).ready(function() {
     $(this).removeClass('shade-on-mouseover');
   });
 
+  //The jQuery modules below add a CSS class that casts a shadow when mouse hovers over the posted tweet box
+  $('.container').on("mouseover", '#tweet-btn', function() {
+    $(this).addClass('glow-on-mouseover');
+  });
+  $('.container').on("mouseout", '#tweet-btn', function() {
+    $(this).removeClass('glow-on-mouseover');
+  });
+
   //The jQuery modules below add a CSS class that changes the color of the footer icons(within posted tweet box) when mouse hovers over the icons. The syntax below is used because the listener needs to access a child element from another file (#flag is the child of .container), so: $('.parent-class').on("eventToListenFor", 'chielToApplyChangeOn', function(){})
   $('.tweet-container').on("mouseover", '#flag', function() {
     $(this).addClass('orange-on-mouseover');
