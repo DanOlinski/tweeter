@@ -29,6 +29,14 @@
     <!-- External JS allows jQuery library to be accessed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- js library to calculate how much time has elapsed since a post was made (timeago.format(dateTweetWasPostedInNumericFormat))-->
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+  </script>
+
   </head>
 
   <body class="body">
@@ -53,11 +61,11 @@
 
   </header>
     <!-- the following are the elements for the page, located below the header. Check CSS files for more info on design settings -->
-    <main class="tweet-container">
+    <main class="container">
 
       <!-- The section element contains the text input box, a button to submit the text, and a number informing how many characters you can write into the text box -->
       <section class="new-tweet">
-        <form id="tweet-form" method="post">
+        <form id="tweet-form" action="/tweets" method="post">
           <label for="tweet-text">What are you humming about?</label><br>
           <textarea name="text" id="tweet-text"></textarea><br>
           <div id="tweetBtnAndCounter">
@@ -66,13 +74,12 @@
           </div>
         </form>
       </section>
-
-      <!-- This space(in the browser) will be populated with a box containing a posted tweet and other information related to the tweet. the code that will implement this is in the /scripts/client.js file-->
-      
+      <section class="tweet-container">
+        <!-- This space(in the browser) will be populated with a box containing a posted tweet and other information related to the tweet. the code that will implement this is in the /scripts/client.js file-->
+      </section>
     </main>
   </body>
   <script src="/scripts/composer-char-counter.js"></script>
   <script src="/scripts/tweet-hover-listener.js"></script>
-  <script src="/scripts/helpers.js"></script>
   <script src="/scripts/client.js"></script>
 </html>

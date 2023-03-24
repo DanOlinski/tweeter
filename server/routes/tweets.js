@@ -7,6 +7,7 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
+  //This function runs on the '/tweets' rout grabbing info from the DOM that is posted when tweet button is triggered (the post is handled by the function below)
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -17,6 +18,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  //This function runs on the '/tweets' rout it posts a value to the DOM coming from the form in the home page
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
