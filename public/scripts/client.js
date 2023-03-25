@@ -16,7 +16,7 @@ $(document).ready(function() {
   $('#tweet-form').submit(function(event) {
     //for submit listeners we need to preventDefault from happening(so that the page doesn't refresh when button is pressed)
     event.preventDefault();
-
+    
     //the variable contains the content typed into the form using .serialize() to find the text, otherwise I'd have to access the text typed by the user with the following jQuery syntax: const textInput = $($(this).children()[2]).val()
     const textInput = $(this).serialize();
     const textInputLength = ($($(this).children()[2]).val()).length;
@@ -38,6 +38,10 @@ $(document).ready(function() {
           $('textarea').val('');
         });
     }
+
+    //When a post is made the counter number needs to revert back to 140, since the page doesn't refresh this action needs to be done through the code below, by emptying the element then appending 140
+    $('#counter').empty();
+    $('#counter').append($(`<div>140</div>`));
   });
 
   //loadTweets calls the renderTweets(located in client-helpers.js) function which posts all tweets stored in server/data-files/initial-tweets.json onto the home page
