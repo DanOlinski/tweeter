@@ -2,7 +2,7 @@
 header layout specifications
 */
 .header {
-  background-color: #5e6674;
+  background-color: #c58a0a;
   margin-right: 5em;
   margin-top: 1em;
   height: 12em;
@@ -34,7 +34,7 @@ h2 and h1 is reset to different color and position from the default h2
 @media (max-width:1023px){
 	.header {
     margin: 0em;
-    height: 19em;
+    height: 400px;
     padding-top: 4em;
     display: flex;
     width: 100%;
