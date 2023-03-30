@@ -49,3 +49,12 @@ h2 and h1 is reset to different color and position from the default h2
     width: 9em;
   }
 }
+
+/*smartphone layout*/
+@media (max-width:400px){
+  .avatar-image {
+    margin-top: 2em;
+    height: 7em;
+    width: 7em;
+  }
+}
