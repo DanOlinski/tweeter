@@ -2,21 +2,50 @@
 header layout specifications
 */
 .header {
-    background-color: #5e6674;
-    height: 520px;
-    padding-top: 120px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  background-color: #5e6674;
+  margin-right: 5em;
+  margin-top: 1em;
+  height: 12em;
+  width: 24em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 /*
-h2 is reset to different color and position from the default h2
+h2 and h1 is reset to different color and position from the default h2
 */
 .header h2 {
   color: #ffffff;
   margin-top: -15px;
+  font-size: 1em;
+}
+
+/*layout features for avatar image in header*/
+.avatar-image {
+  margin-top: 1em;
+  height: 7em;
+  width: 7em;
+}
+
+/*tablet and smartphone layout*/
+@media (max-width:1023px){
+	.header {
+    margin: 0em;
+    height: 19em;
+    padding-top: 4em;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+
+  .avatar-image {
+    margin-top: 0em;
+    height: 9em;
+    width: 9em;
+  }
 }

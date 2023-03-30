@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
-  height: 120px;
+  height: 3em;
   background-color: #4056A1;
   color: #FFFFFF;
 }
@@ -16,8 +16,8 @@
   align-items: center;
   justify-content: center;
   font-family: "Bungee", sans-serif;
-  margin-right: 1.5em;
   margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 /*Nav bar right side content design features*/
@@ -26,5 +26,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  font-size: medium;
+}
+
+/*tablet and smartphone layout*/
+@media (max-width:1023px){
+	.nav {
+    margin-top: 0.3em;
+    position:absolute;
+    background-color: transparent;
+  }
+}
+
+/*smartphone layout*/
+@media (max-width:400px){
+	.nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }

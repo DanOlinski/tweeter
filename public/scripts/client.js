@@ -37,11 +37,11 @@ $(document).ready(function() {
           //The text field for user input should empty after the user submits his tweet. This would normally happen automatically when the page is refreshed, but since the page refresh is being blocked by event.preventDefault(); above we need to add the code below to erase what the user typed
           $('textarea').val('');
         });
-    }
 
-    //When a post is made the counter number needs to revert back to 140, since the page doesn't refresh this action needs to be done through the code below, by emptying the element then appending 140
+        //When a post is made the counter number needs to revert back to 140, since the page doesn't refresh this action needs to be done through the code below, by emptying the element then appending 140
     $('#counter').empty();
     $('#counter').append($(`<div>140</div>`));
+    }
   });
 
   //loadTweets calls the renderTweets(located in client-helpers.js) function which posts all tweets stored in server/data-files/initial-tweets.json onto the home page
